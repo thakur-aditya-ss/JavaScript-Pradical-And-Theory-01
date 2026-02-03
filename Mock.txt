@@ -1,0 +1,30 @@
+//! GEC
+// console.log("Start");
+// var a;
+// console.log(a);
+// fun();
+// a = 10;
+// console.log(fun);
+// function fun() {
+//   var str = "Hello";
+//   console.log(str);
+// }
+// console.log(fun);
+// fun();
+// console.log("End");
+
+// console.log("start");
+// console.log(student);
+// var s1 = 100;
+// function student() {
+//   console.log("I am student");
+// }
+// console.log(trainer);
+// let s2 = 200;
+// console.log(s2);
+// function trainer() {
+//   console.log("I am trainer");
+// }
+// student();
+// trainer();
+// console.log("End");
