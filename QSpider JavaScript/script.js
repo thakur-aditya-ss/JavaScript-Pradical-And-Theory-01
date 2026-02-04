@@ -1388,33 +1388,37 @@ p1.catch((err)=> {
 //! PROMISE WITH ASYNC AND AWAIT
 // Ceating promise By using API
 
-const API_URL = "https://dummyjson.com/todos";
+// const API_URL = "https://dummyjson.com/todos";
 
-async function getTodos(url) {
-  try {
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data); //{todos: Array(30), total: 254, skip: 0, limit: 30}
-    displayTodos(data.todos); // Array(30)
-    // console.log(data.todos);
-  } catch (err) {
-    console.log(err);
-  }
-}
+// async function getTodos(url) {
+//   try {
+//     let response = await fetch(url);
+//     let data = await response.json();
+//     console.log(data); //{todos: Array(30), total: 254, skip: 0, limit: 30}
+//     displayTodos(data.todos); // Array(30)
+//     // console.log(data.todos);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
-getTodos(API_URL);
+// getTodos(API_URL);
 
-function displayTodos(allTodos) {
-  console.log(allTodos);
-  // allTodos.map((ele) => {   // it returns new array but forEach not]
-  allTodos.forEach((ele) => {
-    let { id, userId, todo, completed } = ele;
+// function displayTodos(allTodos) {
+//   console.log(allTodos);
+//   // allTodos.map((ele) => {   // it returns new array but forEach not]
+//   allTodos.forEach((ele) => {
+//     let { id, userId, todo, completed } = ele;
 
-    document.writeln(`
-      <div>
-        <h4> ${todo}</h4>
-        <span> ${completed ? "Completed" : "Pending"}</span>
-      </div>
-    `);
-  });
-}
+//     document.writeln(`
+//       <div>
+//         <h4> ${todo}</h4>
+//         <span> ${completed ? "Completed" : "Pending"}</span>
+//       </div>
+//     `);
+//   });
+// }
+
+//! ------------------------------------------------------------ //
+//                  Date - 04 Feb 2026
+//! ------------------------------------------------------------//
