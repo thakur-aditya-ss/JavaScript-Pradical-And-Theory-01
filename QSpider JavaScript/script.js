@@ -991,8 +991,8 @@ console.log(concatinatedArr);
 //! ADVANCE ARRAY METHODS
 
 //! foreach(callbackfunc)
-/**
- * let arr1 = [10,20,30,40,50];
+
+  let arr1 = [10,20,30,40,50];
 
 // for(let i = 0; i <arr1.length ; i++){
 // console.log(i , arr1[i]);
@@ -1016,7 +1016,8 @@ let returnVal2 = arr1.map((element, index, array) => {
       return element + 5     
     });
     console.log(returnVal2);  // [15, 25, 35, 45, 55]
-    
+
+/**    
 
 //! filter(callbackfunc): Returns the elements of an array that meet the condition specified in a callback function.
 

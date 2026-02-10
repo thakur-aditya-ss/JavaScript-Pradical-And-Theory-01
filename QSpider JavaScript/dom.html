@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body onload="pageLoad()">
+
     <h1>Document Object Model ( DOM )</h1>
 
     <h2 id="head2">target me using ID - 1</h2>
@@ -21,6 +23,96 @@
 
     <main id="table-container"></main>
 
+    <!-- ! Events -->
+
+    <!--  MOUSE EVENTS:-->
+    <button onclick="singleClick()">Single Click</button>
+
+    <button ondblclick="doubleClick()">Double Click</button>
+
+    <button onmouseenter="cursorEnter()">Curser Entered</button>
+
+    <button onmouseleave="cursorLeave()">Curser Leaved</button>
+
+    <button onmousemove="cursorMove()">Curser Moved</button>
+
+    <br /><br />
+    
+    <!-- ! //! KEYBOARD EVENTS :--->
+    
+    <input type="text" onkeydown="keyPressed()" />
+
+    <input type="text" onkeyup="keyReleased()" />
+
+    <input type="text" onchange="inputChange()" />
+
+    <!-- //! FORM EVENTS:---->
+
+    <hr />
+    <h3>Form Example 1</h3>
+    <!-- jab ham form me onsubmit use  kAREGE TO VO EK  event pass karta hai jo ki as a argumenet ham pass karte hai call kiye gaye function me jo ki yaha pe handleForm1() hai 
+  
+    <-- form me onsubmit use hoga  or onclick submitButton pe use hoga but onclick work nhi karta hai submit button me  -->
+
+    <form onsubmit="handleForm1(event)">
+      <input type="text" placeholder="Email" id="email" />
+      <input type="text" placeholder="Password" id="password" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- //! WINDOW EVENTS:--->
+
+
+    <p
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: lightblue;
+        overflow: scroll;
+      "
+      onscroll="pageScroll()"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+      molestiae, modi ut dignissimos exercitationem, quod, saepe accusantium
+      fugiat molestias voluptas provident ab. Sunt eaque eligendi expedita
+      distinctio ipsam, pariatur repellendus, dolore officia eveniet vel nulla,
+      commodi placeat quibusdam. Hic modi magni mollitia itaque deserunt
+      corporis cum obcaecati. Distinctio, placeat expedita doloribus omnis
+      cumque dicta itaque facilis commodi corporis maiores dolor, beatae quidem
+      eius? Numquam adipisci laborum placeat deleniti odit, a quod in quia nisi
+      necessitatibus vitae corrupti totam nam, temporibus provident nihil. Quis
+      reprehenderit tempora cumque ut voluptates dolorem rerum, neque placeat
+      similique minus! Facere cumque corporis quidem non. Pariatur.
+    </p>
+
+
+      
+    <!-- ! ADD EVENT LISTENER -->
+     <form id="signup-form">
+      <input type="text" name="username" id="usernameInput" placeholder="Enter Username">
+      <br><br>
+      <input type="text" name="email" id="emailInput" placeholder="Enter Email">
+      <br><br>
+      <input type="text" name="password" id="passwordInput" placeholder="Enter Password">
+      <br><br>
+      <button>Submit</button>
+     </form>
+
+
+
+
+
+     <!-- ! RAINBOW TASK USING ADD EVENT LISTENER -->
+    <div>violet</div>
+    <div>indigo</div>
+    <div>blue</div>
+    <div>green</div>
+    <div>yellow</div>
+    <div>orange</div>
+    <div>red</div>
+
+
+    
     <script src="./dom.js"></script>
-</body>
+  </body>
 </html>

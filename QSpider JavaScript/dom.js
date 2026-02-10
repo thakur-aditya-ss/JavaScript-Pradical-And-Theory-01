@@ -19,7 +19,7 @@ console.log("-------- DOM-----------");
 
 
 
-// //! 2. document.getElementsByNamEClassname()
+// //! 2. document.getElementsByNameClassname()
 // let h3Tags = document.getElementsByClassName("head3");
 // let h3Tags1 = document.getElementsByClassName("div"); console.log(h3Tags1); // empty
 
@@ -35,15 +35,15 @@ console.log("-------- DOM-----------");
 // console.log(pureArray);
 
 
-// //! 3. document.getElementsByTagName"id, class, tagname)
+// //! 3. document.getElementsByTagName()
 // let tagsCollection = document.getElementsByTagName("h3");
-// let tagsCollection1 = document.getElementsByTagName("div"); console.log(tagsCollection1); // Empty array
+// // let tagsCollection1 = document.getElementsByTagName("div"); console.log(tagsCollection1); // Empty array
 
 // console.log(tagsCollection);  //HTMLCollection(3) [h3.head3, h3.head3, h3.head3]
 
 
-// //! 4. document.querySelector()
-//! Priority :--> id>
+// //! 4. document.querySelector() : "id, class, tagname
+//! Priority :--> id > class > tag
 
 // let ele1 = document.querySelector("#head2");
 // console.log(ele1);
@@ -54,7 +54,7 @@ console.log("-------- DOM-----------");
 // let ele3 = document.querySelector("h3")
 // console.log(ele3);
 
-// let ele4 = document.querySelector("id, #head2, .head3");
+// let ele4 = document.querySelector("h3, #head2, .head3");
 // console.log(ele4);
 
 
@@ -111,7 +111,7 @@ console.log("-------- DOM-----------");
      */
 
 //! DOM MANIPULATION :--->
-
+/**
 const mainContainer = document.querySelector("#table-container")
 
 const tableTag = document.createElement("table");
@@ -131,10 +131,10 @@ const tdTage4 = document.createElement("td");
 const tdTage5 = document.createElement("td");
 const tdTage6 = document.createElement("td");
 
-//! Here we apply CSS
+
 // adding attributes
 tableTag.border ="1";
-tableTag.cellSpacing = "1";
+tableTag.cellSpacing = "0";
 tableTag.cellPadding = "5"
 
 // adding textContent
@@ -166,8 +166,168 @@ console.log(tableTag);
 //document.body.append(tableTag); // use for  apply attributes or css
 mainContainer.append(tableTag); // use for  apply attributes or css
 
-if(true){
-    var x = 10;
-    let y = 20;
+ */
+
+//! ------------------------------------------------------------ //
+//                  Date - 06 Feb 2026
+//! ------------------------------------------------------------//
+
+//! EVENTS : ACTING PERFORMED BY THE USER
+/**
+//! MOUSE EVENTS:--> button tag pe chalta hai jada tar
+// onclick
+function singleClick(){
+    console.log("Single Click");
 }
-console.log(x,y);
+
+// ondblcick
+function doubleClick(){
+    console.log("Double click");
+}
+// onmouseenter / it like ha hover efferct of css
+function cursorEnter(){
+    console.log(" Cursor Entered");
+}
+
+// onmouseleave
+function cursorLeave(){
+    console.log(" Cursor Leaved");
+        1
+}
+
+// onmousemove
+function cursorMove(){
+    console.log(" Cursor Moved");
+    
+}
+
+
+//! KEYBOARD EVENTS :---> ye input tag me chalega 
+// onkeydown : ye ket tap karne pe execute hoga 
+function keyPressed(){
+    console.log("Kety is Pressed");
+}
+
+// onkeyup : key relesed karne pe hoga 
+function keyReleased(){
+    console.log("Kety is Released");
+}
+
+
+// onchange: ye pree ya relesed pe execute nhi hga ye tab hoga jab ham koe dusri jagha tap karege to hota hai 
+
+function inputChange(){
+    console.log("Input Is change");
+}
+
+
+
+
+//! FORM EVENTS:---->
+//onsubmit:--> alwase use in form tags
+
+
+function handleForm1(e){
+e.preventDefault(); // ye form ke default refres behaviour ko  rokta hai isse form submit karne pe page refres nhi hiota hai
+
+    // console.log("Form 1 Submitted");
+    // console.log(e);
+    // console.log(e.target[0].value); // esse ham value ko console pe print kra sakte hai
+
+    //! Way 1
+    // let formData = {
+    //     email : e.target[0].value,
+    //     password: e.target[1].value,
+    // }
+    // console.log(formData);
+
+    //! Way 2
+
+    // let email = document.querySelector("#email")
+
+    // let  password = document.querySelector("#password")
+
+    // let formData = {
+    //     email: email.value,
+    //     password: password.value
+    // };
+    // console.log(formData);
+    
+}
+
+
+
+
+//! WINDOW EVENTS:--->
+// onload : ye body me use hota hai jisse page reload karne pe work karta hai 
+
+function pageLoad(){
+    console.log("Page is Loaded");
+}
+
+// onscroll: esko kishi me bhi laga sakte hai 
+
+function pageScroll(){
+    console.log("Page is Scroll");
+}
+
+
+
+//! addEventlistener("enent", callbackfunc, useCapture)
+
+
+const h1Tag = document.createElement("h1");
+h1Tag.textContent = "Learn addEventListener";
+
+h1Tag.addEventListener("click", ()=> {
+    console.log("H1 Clicked");
+    h1Tag.style.backgroundColor = "red";
+    
+});
+
+document.body.append(h1Tag);
+ */
+
+//! ------------------------------------------------------------ //
+//                  Date - 09 Feb 2026
+//! ------------------------------------------------------------//
+
+// const signupForm = document.getElementById("signup-form");
+
+// signupForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const usernameInput = document.getElementById("usernameInput");
+//   const emailInput = document.getElementById("emailInput");
+//   const passwordInput = document.getElementById("passwordInput");
+
+//   const userData = {
+//     username: usernameInput.value,
+//     email: emailInput.value,
+//     password: passwordInput.value,
+//   };
+
+//   console.log(userData);
+// });
+
+// // ! RAINBOW TASK
+// const divs = document.querySelectorAll("div");
+
+// // NodeList[div,div,div,div,...]
+
+// divs.forEach((ele) => {
+
+//   ele.addEventListener("mouseenter", () => {
+//     ele.style.backgroundColor = ele.textContent;
+//   });
+
+//   ele.addEventListener("mouseleave", () => {
+//     ele.style.backgroundColor = "white";
+//   });
+
+// });
+
+
+//! ------------------------------------------------------------ //
+//                  Date - 10 Feb 2026
+//! ------------------------------------------------------------//
