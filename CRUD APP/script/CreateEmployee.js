@@ -1,4 +1,4 @@
-const { log } = require("node:console");
+// const { log } = require("node:console");
 
 const employeeFormEle = document.getElementById("employee-form");
 
@@ -49,9 +49,13 @@ let resp = await fetch("http://localhost:5000/employees",{
     
 });
 console.log(resp);
+
+// Navigation
+window.location.href = "AllEmployee.html"
+
+
 } catch(err){
-    console.log(err);
-    
+    alert("something went wrong❌")
 }
 
 // console.log(newEmployeeData);

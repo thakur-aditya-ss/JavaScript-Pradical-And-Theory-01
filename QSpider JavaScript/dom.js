@@ -292,42 +292,42 @@ document.body.append(h1Tag);
 //                  Date - 09 Feb 2026
 //! ------------------------------------------------------------//
 
-// const signupForm = document.getElementById("signup-form");
+const signupForm = document.getElementById("signup-form");
 
-// signupForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-//   const usernameInput = document.getElementById("usernameInput");
-//   const emailInput = document.getElementById("emailInput");
-//   const passwordInput = document.getElementById("passwordInput");
+  const usernameInput = document.getElementById("usernameInput");
+  const emailInput = document.getElementById("emailInput");
+  const passwordInput = document.getElementById("passwordInput");
 
-//   const userData = {
-//     username: usernameInput.value,
-//     email: emailInput.value,
-//     password: passwordInput.value,
-//   };
+  const userData = {
+    username: usernameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value,
+  };
 
-//   console.log(userData);
-// });
+  console.log(userData);
+});
 
-// // ! RAINBOW TASK
-// const divs = document.querySelectorAll("div");
+// ! RAINBOW TASK
+const divs = document.querySelectorAll("div");
 
-// // NodeList[div,div,div,div,...]
+// NodeList[div,div,div,div,...]
 
-// divs.forEach((ele) => {
+divs.forEach((ele) => {
 
-//   ele.addEventListener("mouseenter", () => {
-//     ele.style.backgroundColor = ele.textContent;
-//   });
+  ele.addEventListener("mouseenter", () => {
+    ele.style.backgroundColor = ele.textContent;
+  });
 
-//   ele.addEventListener("mouseleave", () => {
-//     ele.style.backgroundColor = "white";
-//   });
+  ele.addEventListener("mouseleave", () => {
+    ele.style.backgroundColor = "white";
+  });
 
-// });
+});
 
 
 //! ------------------------------------------------------------ //
-//                  Date - 10 Feb 2026
+//                  Date - 11 Feb 2026
 //! ------------------------------------------------------------//
